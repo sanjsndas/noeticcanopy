@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies Policy - Noetic Canopy Conservatorium</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary-blue: #1a5276;
+            --secondary-blue: #2e86c1;
+            --light-blue: #aed6f1;
+            --accent-blue: #3498db;
+            --dark-blue: #154360;
+            --text-dark: #2c3e50;
+            --text-light: #f8f9fa;
+            --white: #ffffff;
+            --gray-light: #ecf0f1;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --success-green: #27ae60;
+            --error-red: #e74c3c;
+        }
+
+        body {
+            background-color: #f5f9fc;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--dark-blue), var(--primary-blue));
+            color: var(--white);
+            padding: 20px 0;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-icon {
+            font-size: 2.5rem;
+            color: var(--light-blue);
+        }
+
+        .logo-text h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .logo-text p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        nav a.active {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-bottom: 2px solid var(--light-blue);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(26, 82, 118, 0.85), rgba(46, 134, 193, 0.8)), url('https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 3.2rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+
+        /* Main Content */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--dark-blue);
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 4px;
+            background-color: var(--accent-blue);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Cookies Content */
+        .cookies-content {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 50px;
+            box-shadow: var(--shadow);
+            margin-bottom: 60px;
+        }
+
+        .intro-box {
+            background-color: #f0f7ff;
+            border-left: 4px solid var(--secondary-blue);
+            padding: 25px;
+            margin-bottom: 40px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .intro-box h3 {
+            color: var(--dark-blue);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .content-block {
+            margin-bottom: 50px;
+        }
+
+        .content-block h3 {
+            color: var(--dark-blue);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--light-blue);
+        }
+
+        .content-block p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .content-block ul, .content-block ol {
+            margin-left: 30px;
+            margin-bottom: 25px;
+        }
+
+        .content-block li {
+            margin-bottom: 12px;
+            line-height: 1.7;
+        }
+
+        .cookie-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .cookie-table th {
+            background-color: var(--primary-blue);
+            color: white;
+            text-align: left;
+            padding: 18px 20px;
+            font-weight: 600;
+        }
+
+        .cookie-table td {
+            padding: 18px 20px;
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .cookie-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .cookie-table tr:hover {
+            background-color: #f0f7ff;
+        }
+
+        .cookie-type {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-right: 10px;
+        }
+
+        .essential {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .functional {
+            background-color: #e3f2fd;
+            color: #1565c0;
+        }
+
+        .analytics {
+            background-color: #fff3e0;
+            color: #ef6c00;
+        }
+
+        .marketing {
+            background-color: #fce4ec;
+            color: #c2185b;
+        }
+
+        .cookie-controls {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 40px;
+            margin-top: 50px;
+            border: 2px solid var(--light-blue);
+        }
+
+        .cookie-controls h3 {
+            color: var(--dark-blue);
+            margin-bottom: 25px;
+        }
+
+        .toggle-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .toggle-info h4 {
+            color: var(--text-dark);
+            margin-bottom: 8px;
+            font-size: 1.2rem;
+        }
+
+        .toggle-info p {
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .toggle-slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .toggle-slider {
+            background-color: var(--success-green);
+        }
+
+        input:checked + .toggle-slider:before {
+            transform: translateX(26px);
+        }
+
+        .save-preferences {
+            background-color: var(--secondary-blue);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: block;
+            margin: 30px auto 0;
+        }
+
+        .save-preferences:hover {
+            background-color: var(--primary-blue);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-blue);
+            color: var(--white);
+            padding: 70px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            color: var(--light-blue);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent-blue);
+            bottom: 0;
+            left: 0;
+        }
+
+        .contact-info {
+            list-style: none;
+        }
+
+        .contact-info li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .contact-info i {
+            font-size: 1.2rem;
+            color: var(--light-blue);
+            width: 25px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: var(--light-blue);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+            padding-left: 5px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+            
+            nav ul {
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+
+            nav {
+                width: 100%;
+                display: none;
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                top: 30px;
+                right: 20px;
+            }
+
+            .hero {
+                padding: 70px 0;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .cookies-content {
+                padding: 30px;
+            }
+
+            .cookie-table {
+                display: block;
+                overflow-x: auto;
+            }
+
+            .toggle-group {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+
+            .toggle-switch {
+                align-self: flex-end;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .cookie-controls {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-seedling"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>Noetic Canopy Conservatorium</h1>
+                    <p>The Art and Science of Gardening</p>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="terms.html">Terms Of Privacy</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="cookies.html" class="active">Cookies Policy</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>Our Cookies Policy</h2>
+            <p>Learn how Noetic Canopy Conservatorium uses cookies to enhance your browsing experience and how you can manage your preferences.</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>Understanding Our Use of Cookies</h2>
+            </div>
+            
+            <div class="cookies-content">
+                <div class="intro-box">
+                    <h3><i class="fas fa-info-circle"></i> About This Policy</h3>
+                    <p>This Cookies Policy explains what cookies are, how we use them, and how you can manage your cookie preferences when visiting the Noetic Canopy Conservatorium website. We are committed to protecting your privacy and being transparent about our data practices.</p>
+                </div>
+                
+                <div class="content-block">
+                    <h3>What Are Cookies?</h3>
+                    <p>Cookies are small text files that are placed on your computer or mobile device when you visit a website. They are widely used to make websites work more efficiently and provide information to the website owners.</p>
+                    <p>Cookies help us remember your preferences, understand how you use our site, and improve your experience. They do not contain personally identifiable information unless you've provided it to us.</p>
+                </div>
+                
+                <div class="content-block">
+                    <h3>How We Use Cookies</h3>
+                    <p>At Noetic Canopy Conservatorium, we use cookies for several purposes:</p>
+                    <ul>
+                        <li><strong>Essential Cookies:</strong> Required for the website to function properly. These cannot be disabled as they are necessary for core functionality.</li>
+                        <li><strong>Functional Cookies:</strong> Remember your preferences (like language or region) to provide enhanced, personalized features.</li>
+                        <li><strong>Analytics Cookies:</strong> Help us understand how visitors interact with our website by collecting and reporting information anonymously.</li>
+                        <li><strong>Marketing Cookies:</strong> Used to track visitors across websites to display relevant advertisements.</li>
+                    </ul>
+                </div>
+                
+                <div class="content-block">
+                    <h3>Types of Cookies We Use</h3>
+                    <p>The table below explains the cookies we use and why:</p>
+                    
+                    <table class="cookie-table">
+                        <thead>
+                            <tr>
+                                <th>Cookie Name</th>
+                                <th>Type</th>
+                                <th>Purpose</th>
+                                <th>Duration</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>session_id</td>
+                                <td><span class="cookie-type essential">Essential</span></td>
+                                <td>Maintains your session state across page requests</td>
+                                <td>Session</td>
+                            </tr>
+                            <tr>
+                                <td>consent_preferences</td>
+                                <td><span class="cookie-type functional">Functional</span></td>
+                                <td>Stores your cookie consent preferences</td>
+                                <td>1 year</td>
+                            </tr>
+                            <tr>
+                                <td>language_pref</td>
+                                <td><span class="cookie-type functional">Functional</span></td>
+                                <td>Remembers your language preference</td>
+                                <td>30 days</td>
+                            </tr>
+                            <tr>
+                                <td>_ga</td>
+                                <td><span class="cookie-type analytics">Analytics</span></td>
+                                <td>Google Analytics - Distinguishes users</td>
+                                <td>2 years</td>
+                            </tr>
+                            <tr>
+                                <td>_gid</td>
+                                <td><span class="cookie-type analytics">Analytics</span></td>
+                                <td>Google Analytics - Distinguishes users</td>
+                                <td>24 hours</td>
+                            </tr>
+                            <tr>
+                                <td>_gat</td>
+                                <td><span class="cookie-type analytics">Analytics</span></td>
+                                <td>Google Analytics - Throttles request rate</td>
+                                <td>1 minute</td>
+                            </tr>
+                            <tr>
+                                <td>gardening_interest</td>
+                                <td><span class="cookie-type marketing">Marketing</span></td>
+                                <td>Tracks gardening topics you're interested in</td>
+                                <td>90 days</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="content-block">
+                    <h3>Third-Party Cookies</h3>
+                    <p>In addition to our own cookies, we may also use various third-party cookies:</p>
+                    <ul>
+                        <li><strong>Google Analytics:</strong> Helps us understand how visitors engage with our website.</li>
+                        <li><strong>Social Media Platforms:</strong> Facebook, Instagram, Pinterest, and YouTube may set cookies when you interact with our social media content.</li>
+                        <li><strong>Payment Processors:</strong> If you make a donation or purchase, our payment providers may set cookies.</li>
+                        <li><strong>Embedded Content:</strong> Videos, maps, and other embedded content may set cookies.</li>
+                    </ul>
+                </div>
+                
+                <div class="content-block">
+                    <h3>Managing Your Cookie Preferences</h3>
+                    <p>You have the right to choose whether to accept cookies. However, please note that disabling certain cookies may affect your experience on our website and limit some functionalities.</p>
+                    <p>You can manage cookies through:</p>
+                    <ol>
+                        <li><strong>Browser Settings:</strong> Most web browsers allow you to control cookies through their settings preferences. Refer to your browser's help menu for instructions.</li>
+                        <li><strong>Cookie Management Tools:</strong> Various third-party tools are available to help you manage cookies.</li>
+                        <li><strong>Our Cookie Controls:</strong> Use the controls below to manage your preferences for non-essential cookies.</li>
+                    </ol>
+                </div>
+                
+                <div class="cookie-controls">
+                    <h3><i class="fas fa-sliders-h"></i> Manage Your Cookie Preferences</h3>
+                    <p>Use the toggles below to control which types of cookies you allow on our website. Essential cookies cannot be disabled as they are necessary for the website to function.</p>
+                    
+                    <div class="toggle-group">
+                        <div class="toggle-info">
+                            <h4>Essential Cookies <span class="cookie-type essential">Always Active</span></h4>
+                            <p>Required for basic website functionality. These cookies cannot be disabled.</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked disabled>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="toggle-group">
+                        <div class="toggle-info">
+                            <h4>Functional Cookies <span class="cookie-type functional">Recommended</span></h4>
+                            <p>Remember your preferences to provide enhanced features.</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="functionalToggle" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="toggle-group">
+                        <div class="toggle-info">
+                            <h4>Analytics Cookies <span class="cookie-type analytics">Optional</span></h4>
+                            <p>Help us understand how visitors use our website to improve it.</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="analyticsToggle" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="toggle-group">
+                        <div class="toggle-info">
+                            <h4>Marketing Cookies <span class="cookie-type marketing">Optional</span></h4>
+                            <p>Used to show relevant gardening-related content and advertisements.</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="marketingToggle">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    
+                    <button class="save-preferences" id="savePreferences">
+                        <i class="fas fa-save"></i> Save Cookie Preferences
+                    </button>
+                </div>
+                
+                <div class="content-block">
+                    <h3>Changes to This Policy</h3>
+                    <p>We may update this Cookies Policy from time to time to reflect changes in technology, legislation, or our data practices. We encourage you to review this page periodically for the latest information on our cookie usage.</p>
+                    <p>This policy was last updated on <strong>September 15, 2023</strong>.</p>
+                </div>
+                
+                <div class="content-block">
+                    <h3>Contact Us</h3>
+                    <p>If you have any questions about our use of cookies or this Cookies Policy, please contact our Data Protection Officer:</p>
+                    <ul>
+                        <li><strong>Email:</strong> privacy@noeticcanopy.org</li>
+                        <li><strong>Phone:</strong> (555) 123-PRIV (7748)</li>
+                        <li><strong>Mail:</strong> Data Protection Officer, Noetic Canopy Conservatorium, 123 Botanical Way, Greenhouse District, Verdant City, VC 10101</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Noetic Canopy Conservatorium</h3>
+                    <p>Our mission is to blend the science of horticulture with the art of mindful cultivation, creating spaces that nourish both body and spirit.</p>
+                    <div class="social-icons" style="margin-top: 20px; display: flex; gap: 15px;">
+                        <a href="#" style="color: white; font-size: 1.5rem;"><i class="fab fa-facebook"></i></a>
+                        <a href="#" style="color: white; font-size: 1.5rem;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" style="color: white; font-size: 1.5rem;"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" style="color: white; font-size: 1.5rem;"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Information</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Address:</strong><br>
+                                123 Botanical Way<br>
+                                Greenhouse District<br>
+                                Verdant City, VC 10101
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Phone:</strong><br>
+                                (555) 123-GROW (4769)
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email:</strong><br>
+                                cultivate@noeticcanopy.org
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Conservatory Hours:</strong><br>
+                                Tuesday-Sunday: 9am-6pm<br>
+                                Closed Mondays for Maintenance
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html#principles">Gardening Principles</a></li>
+                        <li><a href="index.html#plants">Plant Database</a></li>
+                        <li><a href="index.html#seasons">Seasonal Guides</a></li>
+                        <li><a href="index.html#techniques">Advanced Techniques</a></li>
+                        <li><a href="#">Workshop Schedule</a></li>
+                        <li><a href="#">Membership Benefits</a></li>
+                        <li><a href="#">Volunteer Opportunities</a></li>
+                        <li><a href="#">Research Publications</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Noetic Canopy Conservatorium. All rights reserved. | Designed with <i class="fas fa-heart" style="color: #e74c3c;"></i> for gardeners everywhere</p>
+                <p style="margin-top: 10px; font-size: 0.85rem;">
+                    <a href="cookies.html" style="color: rgba(255, 255, 255, 0.7); text-decoration: none;">Cookies Policy</a> | 
+                    <a href="privacy.html" style="color: rgba(255, 255, 255, 0.7); text-decoration: none;">Privacy Policy</a> | 
+                    <a href="terms.html" style="color: rgba(255, 255, 255, 0.7); text-decoration: none;">Terms of Privacy</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            mobileMenuBtn.innerHTML = mainNav.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+
+        // Cookie Preferences Management
+        const savePreferencesBtn = document.getElementById('savePreferences');
+        const functionalToggle = document.getElementById('functionalToggle');
+        const analyticsToggle = document.getElementById('analyticsToggle');
+        const marketingToggle = document.getElementById('marketingToggle');
+        
+        // Load saved preferences from localStorage
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedFunctional = localStorage.getItem('cookieFunctional') !== 'false';
+            const savedAnalytics = localStorage.getItem('cookieAnalytics') !== 'false';
+            const savedMarketing = localStorage.getItem('cookieMarketing') === 'true';
+            
+            functionalToggle.checked = savedFunctional;
+            analyticsToggle.checked = savedAnalytics;
+            marketingToggle.checked = savedMarketing;
+            
+            // Update cookie settings based on saved preferences
+            updateCookieSettings();
+        });
+        
+        // Save preferences
+        savePreferencesBtn.addEventListener('click', () => {
+            // Save preferences to localStorage
+            localStorage.setItem('cookieFunctional', functionalToggle.checked);
+            localStorage.setItem('cookieAnalytics', analyticsToggle.checked);
+            localStorage.setItem('cookieMarketing', marketingToggle.checked);
+            
+            // Update cookie settings
+            updateCookieSettings();
+            
+            // Show confirmation message
+            const originalText = savePreferencesBtn.innerHTML;
+            savePreferencesBtn.innerHTML = '<i class="fas fa-check"></i> Preferences Saved!';
+            savePreferencesBtn.style.backgroundColor = 'var(--success-green)';
+            
+            // Reset button after 3 seconds
+            setTimeout(() => {
+                savePreferencesBtn.innerHTML = originalText;
+                savePreferencesBtn.style.backgroundColor = '';
+            }, 3000);
+            
+            // Log preferences (for demo purposes)
+            console.log('Cookie preferences saved:', {
+                functional: functionalToggle.checked,
+                analytics: analyticsToggle.checked,
+                marketing: marketingToggle.checked
+            });
+        });
+        
+        // Update cookie settings based on preferences
+        function updateCookieSettings() {
+            // In a real application, this would set or delete actual cookies
+            // For this demo, we'll just log the actions
+            
+            const functionalEnabled = functionalToggle.checked;
+            const analyticsEnabled = analyticsToggle.checked;
+            const marketingEnabled = marketingToggle.checked;
+            
+            console.log('Updating cookie settings:');
+            console.log('- Functional cookies:', functionalEnabled ? 'Enabled' : 'Disabled');
+            console.log('- Analytics cookies:', analyticsEnabled ? 'Enabled' : 'Disabled');
+            console.log('- Marketing cookies:', marketingEnabled ? 'Enabled' : 'Disabled');
+            
+            // Update page to reflect changes (in a real app, this might reload scripts)
+            if (!analyticsEnabled) {
+                console.log('Analytics tracking disabled');
+                // This is where you'd disable Google Analytics or other tracking scripts
+            }
+            
+            if (!marketingEnabled) {
+                console.log('Marketing cookies disabled');
+                // This is where you'd disable marketing/advertising scripts
+            }
+        }
+
+        // Smooth scrolling for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if(mainNav.classList.contains('active')) {
+                        mainNav.classList.remove('active');
+                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
